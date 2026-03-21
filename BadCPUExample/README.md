@@ -32,13 +32,18 @@ Open Process Explorer and locate the process with high CPU usage.
 ### 4, Analyze with jstack
 Use jstack with the PID to identify the specific Java code causing the high CPU usage.
 Match the thread ID (TID) from Process Explorer with the thread dump to pinpoint the problem.
-#### Get Hex Id from TID from above</li>
 
 1. Start jstack with PID (27612)
     - jstack -l 27612
+   
+
 2. Search NID (41036) from output
 ![nid_found.png](resources/nid_found.png)
-    - and the source code line number also found
+
+
+3. find the issue line
+![issue_line.png](resources/issue_line.png)
+
 
 ## Future Enhancements
 <li>Add automated monitoring scripts
