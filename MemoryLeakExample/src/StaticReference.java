@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class StaticList {
+public class StaticReference {
 
   // Static list → lives for entire app lifecycle
   private static final List<byte[]> cache = new ArrayList<>();

@@ -1,5 +1,4 @@
 # Memory Leak Detection
-
 Some examples demonstrating how to detect and memory leak issues caused by multithreaded Java applications.
 
 ## How to Use
@@ -15,47 +14,38 @@ Start your Java program using IntelliJ IDEA or from the command line.
 
 ### 3. Use JMC
 
-Open Process Explorer and locate the process with high CPU usage.
-
+Open JMC and locate the process with Java application name.
+![jmc_start.png](resources/jmc_start.png)
 <ul>
-<li>Identify the PID of the process</li>
-
-<li>Double-click the process</li>
-
-<li>Go to the Threads tab to find the thread ID (TID) consuming high CPU</li>
+<li>Identify the process by the application name</li>
+<li>Right-click the process</li>
+<li>Chose the <em>Start Flight Record ...</em></li>
+<li>Go to the next page, and chose the correct <em>Memory Leak Detection:</em></li>
+<li>click <em>Finish</em> to start record</li>
 </ul>
 
-![high_cpu.png](resources/high_cpu.png)
-### 4, Analyze with jstack
-Use jstack with the PID to identify the specific Java code causing the high CPU usage.
-Match the thread ID (TID) from Process Explorer with the thread dump to pinpoint the problem.
 
-1. Start jstack with PID (27612)
-    - jstack -l 27612
-   
+### 4, Analyze with JMC
+![jmc_result.png](resources/jmc_result.png)<br>
 
-2. Search NID (41036) from output
-![nid_found.png](resources/nid_found.png)
-
-
-3. find the issue line
-![issue_line.png](resources/issue_line.png)
-
+![issue_from_code.png](resources/issue_from_code.png)
+<li>After the recording is done, go to thw <em>Outline</em> tab</li>
+<li>Chose <em>Memory->Live Objects</em></li>
+<li>Pick the Top count, object may have issue</li>
+<li>Find the specific object (cache) and line number (13) for the memory issue</li>
 
 ## Future Enhancements
-<li>Add automated monitoring scripts
-
-<li>Provide examples of common high-CPU patterns
-
-<li>Include performance optimization techniques
+<li>Unbounded Cache
+<li>ThreadLocal Leak
+<li>Listeners Not Removed
+<li>Inner Classes Holding Outer Reference
+<li>Unclosed Resources
+<li>Listeners Not Removed
 
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## License
-
-[MIT License](LICENSE)
 
 ---
 

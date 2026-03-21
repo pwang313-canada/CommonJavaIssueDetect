@@ -23,10 +23,6 @@ java code
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## License
-
-[MIT License](LICENSE)
-
 ---
 
 Made with ❤️ for Spring Boot developers
