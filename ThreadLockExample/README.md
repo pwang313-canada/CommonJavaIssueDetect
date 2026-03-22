@@ -13,11 +13,25 @@ select the java you want to check
 ![jconsole_start.png](resources/jconsole_start.png)
 
 
-### 3. Find any dead lock thread by name, and check the java code 
+### 3. Find any deadlock thread by name, and check the java code 
 ![dead_lock_found.png](resources/dead_lock_found.png)
 
 java code
 ![source_code.png](resources/source_code.png)
+
+### 4. Alternate way to find deadlock
+Run VisualVm and load Java application
+
+Click `Threads` tab
+
+Click `Thread Dump`
+
+![virsual_deadlock.png](resources/virsual_deadlock.png)
+
+Search `BLOCKED`
+![visualvm_result.png](resources/visualvm_result.png)
+
+
 
 ## Contributing
 
