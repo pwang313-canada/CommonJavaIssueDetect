@@ -1,19 +1,20 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class StaticReference {
+
+public class StaticReferenceWithMemoryLeak {
 
   // Static list → lives for entire app lifecycle
   private static final List<byte[]> cache = new ArrayList<>();
 
   public static void main(String[] args) {
+    System.out.println("Java application with memory leak, GC won't have any impact");
 
     while (true) {
       // Allocate 1MB each loop
-      byte[] data = new byte[1024 * 1024];
+      byte[] data = new byte[3072 * 1024];
       cache.add(data);
 
-      System.out.println("Added 1MB, cache size: " + cache.size());
 
       try {
         Thread.sleep(100);

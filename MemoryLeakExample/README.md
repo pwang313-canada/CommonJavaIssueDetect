@@ -40,7 +40,6 @@ Open JMC and locate the process with Java application name.
 <li>Listeners Not Removed
 <li>Inner Classes Holding Outer Reference
 <li>Unclosed Resources
-<li>Listeners Not Removed
 
 ## Contributing
 

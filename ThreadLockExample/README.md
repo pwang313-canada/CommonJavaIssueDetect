@@ -16,7 +16,8 @@ select the java you want to check
 ### 3. Find any deadlock thread by name, and check the java code 
 ![dead_lock_found.png](resources/dead_lock_found.png)
 
-java code
+java code with line number<br>
+
 ![source_code.png](resources/source_code.png)
 
 ### 4. Alternate way to find deadlock
