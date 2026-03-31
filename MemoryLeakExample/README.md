@@ -11,7 +11,14 @@ https://www.oracle.com/java/technologies/javase/products-jmc9-downloads.html
 ### 2. Run your Java application
 
 Start your Java program using IntelliJ IDEA or from the command line.
-
+with the parameters.
+```adlanguage
+java -Dcom.sun.management.jmxremote \
+ -Dcom.sun.management.jmxremote.port=9020 \
+ -Dcom.sun.management.jmxremote.authenticate=false \
+ -Dcom.sun.management.jmxremote.ssl=false \
+ StaticReferenceWithMemoryLeak
+```
 ### 3. Use JMC
 
 Open JMC and locate the process with Java application name.
