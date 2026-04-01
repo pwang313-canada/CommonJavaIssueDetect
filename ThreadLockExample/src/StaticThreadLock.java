@@ -1,4 +1,4 @@
-public class ThreadLockExample {
+public class StaticThreadLock {
 
   private final Object lock = new Object();
 
@@ -23,7 +23,7 @@ public class ThreadLockExample {
 
   // Synchronized on Class object (issue)
   public void synchronizedClassBlock() {
-    synchronized (ThreadLockExample.class) {
+    synchronized (StaticThreadLock.class) {
       System.out.println("Synchronizing on Class object");
     }
   }
@@ -36,7 +36,7 @@ public class ThreadLockExample {
   }
 
   public static void main(String[] args) {
-    ThreadLockExample test = new ThreadLockExample();
+    StaticThreadLock test = new StaticThreadLock();
 
     test.synchronizedMethod();
     test.synchronizedThisBlock();

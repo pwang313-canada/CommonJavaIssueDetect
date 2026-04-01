@@ -1,4 +1,4 @@
-public class DeadlockExample {
+public class RuntimeThreadLock {
 
   private static final Object lock1 = new Object();
   private static final Object lock2 = new Object();
